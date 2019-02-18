@@ -1,0 +1,16 @@
+#content {
+	text-align: center;
+	padding-top: 25%;
+}
+body {
+	background: url(https://images.unsplash.com/photo-1504276048855-f3d60e69632f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
+	background-size: cover;
+	background-position: center; 
+}
+h1{
+	color: white;
+}
+
+h3{
+	color: white;
+}
