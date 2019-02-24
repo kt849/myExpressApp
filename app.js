@@ -278,7 +278,7 @@ app.delete("/models/:id",checkOwnership, function(req,res){
 		}
 		else
 		{
-			req.flash("success","Comment deleted");
+			req.flash("success","Post deleted successfully");
 			res.redirect("/models");
 		}
 	})
