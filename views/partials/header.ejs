@@ -14,13 +14,20 @@
 			</div>
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
+
 					<%if(!cUser){%>
 						<li><a href="/login">Login</a></li>
 						<li><a href="/register">Sign Up</a></li>
 					<%} else{%>
 						<li><a href="#"><%=cUser.username%></a></li>
 						<li><a href="/logout">Logout</a></li>
-					<%}%>	
+					<%}%>
+					<li>
+							<form class="form-inline my-2 my-lg-0" id="searchform" action="/searchpost" method="GET">
+							    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="squery" id="searchinput">
+							    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    						</form>
+    				</li>		
 				</ul>
 		</div>
 	</nav>

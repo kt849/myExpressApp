@@ -15,6 +15,7 @@ router.get("/",function(req, res) {
 				}
 				else
 				{
+					//console.log(typeof models);
 					res.render("models",{models:models});
 				}
 			});
@@ -116,6 +117,5 @@ router.delete("/:id",middleware.checkOwnership, function(req,res){
 		}
 	})
 });
-
 
 module.exports = router;

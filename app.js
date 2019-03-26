@@ -80,6 +80,40 @@ app.use("/models/:id/comments",commentRoutes);
 
 
 
+
+//search posts
+app.get("/searchpost",function(req,res){
+	var searchQuery = String(req.query.squery);
+	searchQuery = searchQuery.toLowerCase();
+	//console.log(typeof searchQuery);
+	var filteredModels = []
+	Model.find({},function(err,models)
+			{
+				if(err)
+				{
+					console.log(err);
+				}
+				else
+				{
+					//console.log(models);	
+					models.forEach(function(model){
+						var tmp = String(model.name);
+						tmp = tmp.toLowerCase();
+						if(tmp.indexOf(searchQuery)!=-1)
+						{
+							filteredModels.push(model);
+						}
+					})
+					if(filteredModels.length==0)
+						res.render("noresults");
+					else
+						res.render("filtered-models",{models:filteredModels,searchQuery:searchQuery});
+				}
+			});
+	//res.send("working");
+})
+
+
 // app.get('/', function (req, res) {
 // 	res.render("root"); 
 // });
