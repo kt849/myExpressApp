@@ -17,15 +17,8 @@ var indexRoutes = require("./routes/index")
 
 
 
-// mongoose.connect("mongodb+srv://kt849:Laptop%4012345@cluster0-iscgt.mongodb.net/test?retryWrites=true", { useNewUrlParser: true });
-const MongoClient = require(‘mongodb’).MongoClient;
-const uri = "mongodb+srv://kt849:Laptop%4012345@cluster0-iscgt.mongodb.net/test?retryWrites=true";
-const client = new MongoClient(uri, { useNewUrlParser: true });
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
-});
+ mongoose.connect("mongodb://kt849:Kush12345@ds125616.mlab.com:25616/myexpressapp", { useNewUrlParser: true });
+
 app.use(express.static(__dirname+"/public"));
 app.use(methodOverride("_method"));
 app.use(bodyParser.urlencoded({extended:true}));
