@@ -17,7 +17,7 @@ var indexRoutes = require("./routes/index")
 
 
 
-mongoose.connect("mongodb://localhost/kawaiOnna", { useNewUrlParser: true });
+mongoose.connect("mongodb+srv://kt849:<password>@cluster0-iscgt.mongodb.net/test?retryWrites=true", { useNewUrlParser: true });
 
 app.use(express.static(__dirname+"/public"));
 app.use(methodOverride("_method"));
