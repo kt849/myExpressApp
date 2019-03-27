@@ -17,7 +17,7 @@ var indexRoutes = require("./routes/index")
 
 
 
-mongoose.connect("mongodb+srv://kt849:Laptop@12345@cluster0-iscgt.mongodb.net/test?retryWrites=true", { useNewUrlParser: true });
+mongoose.connect("mongodb+srv://kt849:Laptop%4012345@cluster0-iscgt.mongodb.net/test?retryWrites=true", { useNewUrlParser: true });
 
 app.use(express.static(__dirname+"/public"));
 app.use(methodOverride("_method"));
