@@ -17,7 +17,7 @@ var indexRoutes = require("./routes/index")
 
 
 
- mongoose.connect("mongodb://kt849:Kush12345@ds125616.mlab.com:25616/myexpressapp", { useNewUrlParser: true });
+ mongoose.connect("mongodb://kt849:Laptop@12345@ds125616.mlab.com:25616/myexpressapp", { useNewUrlParser: true });
 
 app.use(express.static(__dirname+"/public"));
 app.use(methodOverride("_method"));
